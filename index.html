@@ -152,25 +152,96 @@
             transform: translateY(-2px);
         }
 
-        .hero-image-wrapper {
-            position: relative;
+        .hero-card {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(30, 37, 43, 0.03);
             width: 100%;
-            height: 480px;
-            background-color: var(--accent-light);
-            border-radius: 8px;
-            overflow: hidden;
         }
 
-        .hero-image-placeholder {
-            width: 100%;
-            height: 100%;
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            font-family: var(--font-editorial);
+            font-size: 2rem;
+            font-weight: 600;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent);
-            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-name {
             font-family: var(--font-editorial);
-            font-size: 1.2rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-sub {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .card-loc {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background-color: var(--bg-color);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2.5rem;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #4CAF50; /* Active green status dot */
+            border-radius: 50%;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem 1rem;
+            width: 100%;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-n {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        .stat-l {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
         }
 
         .about-grid {
