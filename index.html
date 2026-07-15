@@ -142,4 +142,297 @@
             padding: 1rem 2rem;
             background-color: var(--text-main);
             color: var(--bg-color);
-            font-weight:
+            font-weight: 500;
+            border-radius: 4px;
+            gap: 0.75rem;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            background-color: var(--accent-light);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-style: italic;
+            font-family: var(--font-editorial);
+            font-size: 1.2rem;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 5rem;
+        }
+
+        .about-statement {
+            font-family: var(--font-editorial);
+            font-size: 1.8rem;
+            line-height: 1.4;
+            color: var(--accent);
+        }
+
+        .about-details p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.5rem;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 350px;
+            background-color: #F0F0F0;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #A0A0A0;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .project-card:hover .project-image {
+            transform: scale(1.02);
+            border-color: var(--accent);
+        }
+
+        .project-meta {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .project-title {
+            font-family: var(--font-editorial);
+            font-size: 1.6rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .timeline {
+            max-width: 800px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .role-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .role-company {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        footer {
+            padding: 6rem 0;
+            background-color: #1E252B;
+            color: var(--bg-color);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+        }
+
+        .footer-heading {
+            font-family: var(--font-editorial);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-links {
+            list-style: none;
+        }
+
+        .contact-links li {
+            margin-bottom: 1rem;
+        }
+
+        .contact-links a {
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(250, 249, 246, 0.3);
+            padding-bottom: 0.25rem;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-light);
+            border-bottom-color: var(--bg-color);
+        }
+
+        .copyright {
+            margin-top: 4rem;
+            font-size: 0.85rem;
+            color: #8A949E;
+        }
+
+        @media (max-width: 968px) {
+            .hero-grid, .about-grid, .project-grid, .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .hero-title { font-size: 2.8rem; }
+            .hero-image-wrapper { height: 350px; }
+            .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+            section { padding: 5rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">[YOUR NAME]</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Selected Work</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1 class="hero-title">Designing sustainable solutions through <em>focused research</em>.</h1>
+                <p class="hero-subtitle">Introduce your core expertise, professional values, and what drives your day-to-day work here.</p>
+                <a href="#contact" class="cta-button">
+                    Let's Connect 
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.33334 8H12.6667M12.6667 8L8.66668 4M12.6667 8L8.66668 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-placeholder">[ Professional Portrait / Abstract Graphic Placeholder ]</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <span class="section-tag">About & Philosophy</span>
+            <div class="about-grid">
+                <h2 class="about-statement">"A structured statement bridging the gap between rigorous theory and actionable execution."</h2>
+                <div class="about-details">
+                    <p>[Your background summary, core design philosophy, or unique strategic framework.]</p>
+                    <p>[Secondary insights about tools, methodologies, or industries you typically serve.]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="container">
+            <span class="section-tag">Selected Initiatives</span>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-image">[ Project Image ]</div>
+                    <span class="project-meta">[ Category / Scope ]</span>
+                    <h3 class="project-title">[ Initiative Title ]</h3>
+                    <p class="project-desc">[ Impactful summary highlighting objectives, process challenges, and target metric results. ]</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">[ Project Image ]</div>
+                    <span class="project-meta">[ Category / Scope ]</span>
+                    <h3 class="project-title">[ Initiative Title ]</h3>
+                    <p class="project-desc">[ Impactful summary highlighting objectives, process challenges, and target metric results. ]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <span class="section-tag">Professional Timeline</span>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">[ Date Range ]</div>
+                    <div class="timeline-details">
+                        <h3 class="role-title">[ Role / Title ]</h3>
+                        <p class="role-company">[ Company Name ]</p>
+                        <p class="about-details">[ Core organizational impact statements and leadership milestones. ]</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">[ Date Range ]</div>
+                    <div class="timeline-details">
+                        <h3 class="role-title">[ Role / Title ]</h3>
+                        <p class="role-company">[ Company Name ]</p>
+                        <p class="about-details">[ Targeted operational achievements or research deployment results. ]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div>
+                <h2 class="footer-heading">Have an initiative in mind?<br>Let’s start a conversation.</h2>
+                <p style="color: #8A949E; max-width: 450px;">Available for selective consultancy roles, research partnerships, and speaking engagements.</p>
+            </div>
+            <div>
+                <ul class="contact-links">
+                    <li><a href="mailto:#">[ Contact Email ]</a></li>
+                    <li><a href="#" target="_blank">[ Professional Profile Link ]</a></li>
+                    <li><a href="#" target="_blank">[ Platform Portfolio Link ]</a></li>
+                </ul>
+                <p class="copyright">&copy; 2026 [Your Name]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
